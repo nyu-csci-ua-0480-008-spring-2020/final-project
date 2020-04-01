@@ -6,13 +6,8 @@ The outbreak of COVID-19 has proven to be a stressful and anxiety-provoking time
 
 ## Data Model
 
-The application will have two large categories - "Help Yourself" and "Help Others" and each activity has a name, a description, a website, and a smaller filter 
-
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
-* 
-*
-
+The application will have two large categories - "Help Yourself" and "Help Others" and each activity has the following: name, description, site, filter 
+* the form to submit will have the same properties
 
 2 Example Activities:
 
@@ -23,6 +18,7 @@ The application will have two large categories - "Help Yourself" and "Help Other
   site: "https://www.facebook.com/coronavirus_info/request_offer_help/",
   category: 'community volunteering'
 }
+
 {
   name: "#findthemasks",
   description: 'How and where to donate masks and other protective equipment for healthcare workers.',
@@ -46,9 +42,7 @@ An Example Category:
 ```
 
 
-## [Link to Commented First Draft Schema](db.js) 
-
-(___TODO__: create a first draft of your Schemas in db.js and link to it_)
+### [Link to Commented First Draft Schema](db.js) 
 
 ## Wireframes
 
@@ -67,7 +61,10 @@ An Example Category:
 ![list](documentation/list-slug.png)
 
 ## Site map
-
+landing page (the split screen)
+    -- help others - (different categories)
+    -- help yourself- (different categories)
+    -- submit
 
 ## User Stories or Use Cases
 
@@ -75,20 +72,20 @@ An Example Category:
 2. as a user, I can log in to the site
 3. as a user, I can drag the boxes (of activities)/items to a list (daily schedule form)
 4. as a user, I can add activities (either under #helpyourself or #helpothers)
-5. as a user, I can share my quaroutine with others
-6. as a user, I can access the same daily schedule again the next day
+5. as a user, I can share my quaroutine with others (by capturing the schedule as an image/using it as a template)
+6. as a user who loves to schedule and block out time, I can modify the boxes to the duration I want 
 
 ## Research Topics
 
 * (5 points) use React
 * (1 point) form submit? how do we approve?
-* (1 point) google calendar api? not sure. some kind of scheduling library
+* (1 point) google calendar api? not sure. some kind of scheduling/calendar library
 * (1 point) cookies
 * (1 point) bootstrap
     * we will use a reasonable amount of customization of the css framework
 
 
-## [Link to Initial Main Project File](https://github.com/jacquine/quaroutine) 
+### [Link to Initial Main Project File](https://github.com/jacquine/quaroutine) 
 (this is a link to our create-react-app we made, barebones still)
 
 ## References 

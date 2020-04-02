@@ -5,9 +5,10 @@ The outbreak of COVID-19 has proven to be a stressful and anxiety-provoking time
 
 
 ## Data Model
+The application will have two large branches - "Help Yourself" and "Help Others" and each activity has the following: name, description, site, filtering categories. 
 
-The application will have two large categories - "Help Yourself" and "Help Others" and each activity has the following: name, description, site, filter 
-* the form to submit will have the same properties
+* a category has multiple activities
+* an activity has the properties: name, description, site, category 
 
 2 Example Activities:
 
@@ -16,14 +17,14 @@ The application will have two large categories - "Help Yourself" and "Help Other
   name: "Facebook's Community Help Directory",
   description: 'Facebook\'s location-based board for individuals offering and requesting help (supplies, errands, information) within their local communities.',
   site: "https://www.facebook.com/coronavirus_info/request_offer_help/",
-  category: 'community volunteering'
+  category: "community volunteering"
 }
 
 {
   name: "#findthemasks",
   description: 'How and where to donate masks and other protective equipment for healthcare workers.',
   site: "https://findthemasks.com/,
-  category: 'medical supplies'
+  category: "medical supplies"
 }
 ```
 
@@ -32,44 +33,32 @@ An Example Category:
 ```javascript
 {
   user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
+  name: "medical supplies"
+  list: [
+    { name: "#findthemasks", id: "9876", checked: true},
+    { name: "mask-match", id: "5423", checked: true},
   ],
-  createdAt: // timestamp
+  submittedBy: username, // could this be connected to google cal?
+  submittedAt: //timestamp
 }
 ```
-
 
 ### [Link to Commented First Draft Schema](db.js) 
 
 ## Wireframes
-
-(___TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc._)
-
-/list/create - page for creating a new shopping list
-
-![list create](documentation/list-create.png)
-
-/list - page for showing all shopping lists
-
-![list](documentation/list.png)
-
-/list/slug - page for showing specific shopping list
-
-![list](documentation/list-slug.png)
+[click here for a simple prototype](https://www.figma.com/file/itAqlX48A355QwhHh8yYTk/Quaroutine?node-id=0%3A1)
 
 ## Site map
-landing page (the split screen)
+landing page (split screen, hover)
+    -- calendar
     -- help others - (different categories)
     -- help yourself- (different categories)
-    -- submit
+    -- submit new activity
 
 ## User Stories or Use Cases
 
-1. as non-registered user, I can register a new account with the site
-2. as a user, I can log in to the site
+1. as non-registered user, I can register a new account with the site (not sure)
+2. as a user, I can log in to the site (not sure)
 3. as a user, I can drag the boxes (of activities)/items to a list (daily schedule form)
 4. as a user, I can add activities (either under #helpyourself or #helpothers)
 5. as a user, I can share my quaroutine with others (by capturing the schedule as an image/using it as a template)
@@ -78,7 +67,7 @@ landing page (the split screen)
 ## Research Topics
 
 * (5 points) use React
-* (1 point) form submit? how do we approve?
+* (1 point) form submit for approval
 * (1 point) google calendar api? not sure. some kind of scheduling/calendar library
 * (1 point) cookies
 * (1 point) bootstrap
@@ -92,3 +81,4 @@ landing page (the split screen)
 
 1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
 2. [react doc](https://reactjs.org/) - (add link to source code that was based on this)
+3. [google calendar API](https://developers.google.com/calendar)
